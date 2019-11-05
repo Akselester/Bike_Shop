@@ -69,6 +69,10 @@ public class Shop {
                     showAllBikes(rentBikes);
                     break;
                 case 5:
+                    if (rentBikes.length == 0) {
+                        System.out.println("Отсутствуют велосипеды в аренде");
+                        break;
+                    }
                     System.out.println("возврат арендованного велосипеда.\nВыберите позицию для возврата: ");
                     showBikesChose(rentBikes);
                     int bikeToReturn = scan.nextInt();
